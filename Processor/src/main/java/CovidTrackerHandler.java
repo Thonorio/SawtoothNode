@@ -56,10 +56,9 @@ public class CovidTrackerHandler implements TransactionHandler {
 
                 submitLocationRecord(state, submittedData, headerPublicKey);
             }
-
-            System.out.println("Address TEST "  + getAddressForIPs());
-
-            submitIPRecord(state, getKnownIpAddress().get(0), getAddressForIPs());
+            
+            // Test to make up to date node ips available for all new devices
+            //submitIPRecord(state, getKnownIpAddress().get(0), getAddressForIPs());
 
         } catch (JSONException e) {
             e.printStackTrace();
